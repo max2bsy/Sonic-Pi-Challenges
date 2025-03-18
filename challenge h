@@ -1,0 +1,62 @@
+=begin
+
+Functions are great for when the pattern of notes (sleeps) and the actual notes are exactly the same.
+
+Parameterized functions are great for when:
+a. the pattern of notes is the same but the actual notes are different!
+b. two chunks of code are almost identical but have a few slight differences!
+
+YOUR TASK: Use a parameterized function to optimize the code below.
+
+=end
+
+use_bpm 120
+use_synth :chiplead
+
+define :notequick do |note_1, note_2|
+  play note_1
+  play note_2
+  sleep 0.5
+end
+
+# MEASURE 1--------------------
+notequick :a4, :a5
+notequick :a4, :a5
+notequick :c5, :c6
+notequick :a4, :a5
+notequick :d5, :d6
+notequick :a4, :a5
+notequick :e5, :e6
+notequick :d5, :d6
+
+# MEASURE 2 ---------------------------
+notequick :c5, :c6
+notequick :c5, :c6
+notequick :e5, :e6
+notequick :c5, :c6
+notequick :g5, :g6
+notequick :c4, :c5
+notequick :e5, :e6
+notequick :c4, :c5
+
+
+# MEASURE 3 ---------------------------
+notequick :g4, :g5
+notequick :g4, :g5
+notequick :b4, :b5
+notequick :g4, :g5
+notequick :c5, :c6
+notequick :g4, :g5
+notequick :d5, :d6
+notequick :c5, :c6
+
+
+# MEASURE 4 ---------------------------
+notequick :f4, :f5
+notequick :f4, :f5
+notequick :a4, :a5
+notequick :f4, :f5
+notequick :c5, :c6
+notequick :f4, :f5
+notequick :c5, :c6
+notequick :b4, :b5
