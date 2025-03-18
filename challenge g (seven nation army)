@@ -1,0 +1,20 @@
+#challenge g
+use_bpm 160
+use_synth :fm
+notes = [:e3,:e3,:g3,:e3,0,:d3,:c3,:b2]
+rest = [1.5,0.5,0.75,0.25,0.5,0.5,2,2]
+
+i = 0
+
+# DIRECTIONS: modify the code below so it uses the array and a loop!
+i = 0
+live_loop :white_stripes do
+  i = 0
+  8.times do
+    print (i)
+    play (notes[i])
+    sleep rest[i]
+    i = i + 1
+    
+  end
+end
